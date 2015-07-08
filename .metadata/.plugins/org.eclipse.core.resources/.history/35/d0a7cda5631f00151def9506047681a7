@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="hhhhghdgj sjlk lskdjflksd jsfkld fsljslk sdlkfjs dlksjf sdkflsdk fjskdlf sldkfj fjlskdfk sldfkj dklsdfj skfl sdkfj dklsf ldskfj djfngdfjlg fdglkjdf gkfjd lgkf dglfkdgjfldkg dfglkjd flgkjfdlgk fgjfkg fkgfg fg fskfjs glkahlkjf gfghkdflg ksfghreiug arlekjgag jf jjfsdl sdlkjflksdfj slgjio rjeiog rgmreoig megkldf glkfdgmflkdg fdlkgdfkjsgdfl skg sfdlkgh dgfkhdf kj dfg dfjg kdfj glfdk jglkdfgj dlfigj ldfkg jdflkg jldfgj dfg gjfkld glkjfg lkdfgjlfkdg dfg gjflkfjg ldfg lfkdj glfd gjfldkg fldkg jfldkgj ldfkgj ldfkgj ldfkgjldfkgjlfdkgjldkfjg lfdkg jldfkg fdlkg fldk gflkd gfl jgd fggkdjh ldkjg lhgkfj fhdgkl dfjghl kdjg hksdjfgh lkjdfghdkjfgh kjldfsghk dlg hhgfjklshg jkkljadgl ksjdfhgjkldhgk jldfghdjfklghdfkjg g djkghf kjldhfgkljfdhgk dfhgkjldfgh ghjkldfhglkjfdhgkjldfg dfklghdfjghdk jflhlkjsdhgl kfghkljsdfhgskdlf jghlskjdfg sdkljfghskdljfgh dglkjh dsgfkjhfgkj s"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

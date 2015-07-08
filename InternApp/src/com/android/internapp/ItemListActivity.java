@@ -69,9 +69,24 @@ public class ItemListActivity extends FragmentActivity implements
 		} else {
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
-			Intent detailIntent = new Intent(this, ItemDetailActivity.class);
-			detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
-			startActivity(detailIntent);
+			if (id.equals("1")) {
+				Intent detailIntent1 = new Intent(this, Map.class);
+				detailIntent1.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
+				startActivity(detailIntent1);
+			} else if(id.equals("2")) {
+				Intent detailIntent2 = new Intent(this, UserSearch.class);
+				detailIntent2.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
+				startActivity(detailIntent2);	
+			} else if(id.equals("3")) {
+				Intent detailIntent3 = new Intent(this, FAQ.class);
+				detailIntent3.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
+				startActivity(detailIntent3);	
+			} else if(id.equals("4")) {
+				Intent detailIntent4 = new Intent(this, OnboardingResources.class);
+				detailIntent4.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
+				startActivity(detailIntent4);	
+			}
+			
 		}
 	}
 }
