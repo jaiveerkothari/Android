@@ -30,6 +30,31 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.android.internapp.ItemListActivity" />
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBNLp40Lb4bqy6PpjIlA_nyOHDOn4F7-Jg" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".FAQ"
+            android:label="@string/title_activity_faq" >
+        </activity>
+        <activity
+            android:name=".OnboardingResources"
+            android:label="@string/title_activity_onboarding_resources" >
+        </activity>
+        <activity
+            android:name=".Map"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name=".UserSearch"
+            android:label="@string/title_activity_user_search" >
+        </activity>
     </application>
 
 </manifest>
