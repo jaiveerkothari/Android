@@ -1,34 +1,73 @@
 package com.android.internapp;
 
 import android.support.v7.app.ActionBarActivity;
+import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
-public class Map extends ActionBarActivity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_map);
-	}
+public class Map extends ListActivity
+{
+    TextView selection;
+    ListItem[] items = { 
+            new ListItem("BBC", BBC.class), 
+            new ListItem("Evendale", BBC.class), 
+            new ListItem("North Pointe", BBC.class), 
+            new ListItem("location", BBC.class), 
+            new ListItem("location2", BBC.class), 
+            new ListItem("Location3", BBC.class)};
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.map, menu);
-		return true;
-	}
+    @Override
+    public void onCreate(Bundle icicle)
+    {
+        super.onCreate(icicle);
+        setContentView(R.layout.activity_map);
+        setListAdapter(new ArrayAdapter<ListItem>(
+                this, android.R.layout.simple_list_item_1, items));
+        selection = (TextView) findViewById(R.id.selection);
+    }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id)
+    {
+        super.onListItemClick(l, v, position, id);
+        final Intent intent = new Intent(this, items[position].getActivity());
+        startActivityForResult(intent, position);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent)
+    {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode == RESULT_OK)
+        {
+            // Perform different actions based on from which activity is
+            // the application returning:
+            switch (requestCode)
+            {
+                case 0:
+                    // TODO: handle the return of the StartTripActivity
+                    break;
+                case 1:
+                    // TODO: handle the return of the ClockinActivity
+                    break;
+                case 2:
+                    // TODO: handle the return of the CustomerSvcActivity
+                    // and so on...
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (resultCode == RESULT_CANCELED)
+        {
+           // resultsTxt.setText("Canceled");
+        }
+    }
 }

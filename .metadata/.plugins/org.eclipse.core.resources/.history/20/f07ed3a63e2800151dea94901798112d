@@ -1,0 +1,61 @@
+package com.android.internapp;
+
+import android.app.Activity;
+
+public class CustomerListItem
+{
+    private String label;
+    private Class<?> activity;
+
+    /**
+     * @param label
+     * @param activity
+     */
+    public CustomerListItem(String label, Class<?> activity)
+    {
+        super();
+        this.label = label;
+        this.activity = activity;
+    }
+
+    /**
+     * @return the label
+     */
+    public String getLabel()
+    {
+        return label;
+    }
+
+    /**
+     * @param label the label to set
+     */
+    public void setLabel(String label)
+    {
+        this.label = label;
+    }
+
+    /**
+     * @return the activity
+     */
+    public Class<?> getActivity()
+    {
+        return activity;
+    }
+
+    /**
+     * @param activity the activity to set
+     */
+    public void setActivity(Class<Activity> activity)
+    {
+        this.activity = activity;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString()
+    {
+        return this.label;
+    }
+}
