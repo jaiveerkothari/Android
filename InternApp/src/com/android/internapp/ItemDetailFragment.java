@@ -1,5 +1,6 @@
 package com.android.internapp;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -54,6 +55,10 @@ public class ItemDetailFragment extends Fragment {
 
 		// Show the dummy content as text in a TextView.
 		if (mItem != null) {
+
+			 
+	
+			
 			((TextView) rootView.findViewById(R.id.item_detail))
 					.setText(mItem.text);
 		}
