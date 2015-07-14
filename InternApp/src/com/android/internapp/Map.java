@@ -16,12 +16,16 @@ public class Map extends ListActivity
 {
     TextView selection;
     ListItem[] items = { 
+            new ListItem("Blue Ash Tech Center", BATC.class), 
             new ListItem("BBC", BBC.class), 
-            new ListItem("Evendale", BBC.class), 
-            new ListItem("North Pointe", BBC.class), 
-            new ListItem("location", BBC.class), 
-            new ListItem("location2", BBC.class), 
-            new ListItem("Location3", BBC.class)};
+            new ListItem("Building 800 (Orientation)", Bldg800.class), 
+            new ListItem("Crown Point", CrownPoint.class), 
+            new ListItem("Evendale Plant", Evendale.class), 
+            new ListItem("Indiana Wesleyan University", IWU.class), 
+            new ListItem("North Pointe 1", NP1.class), 
+            new ListItem("North Pointe 2", NP2.class), 
+            new ListItem("Princeton Hill", PrincetonHill.class), 
+            new ListItem("Quality Technology Center", QTC.class)};
 
     @Override
     public void onCreate(Bundle icicle)

@@ -59,6 +59,42 @@
             android:name=".BBC"
             android:label="@string/title_activity_bbc" >
         </activity>
+        <activity
+            android:name=".BATC"
+            android:label="@string/title_activity_batc" >
+        </activity>
+        <activity
+            android:name=".CrownPoint"
+            android:label="@string/title_activity_crown_point" >
+        </activity>
+        <activity
+            android:name=".IWU"
+            android:label="@string/title_activity_iwu" >
+        </activity>
+        <activity
+            android:name=".NP1"
+            android:label="@string/title_activity_np1" >
+        </activity>
+        <activity
+            android:name=".NP2"
+            android:label="@string/title_activity_np2" >
+        </activity>
+        <activity
+            android:name=".Evendale"
+            android:label="@string/title_activity_evendale" >
+        </activity>
+        <activity
+            android:name=".PrincetonHill"
+            android:label="@string/title_activity_princeton_hill" >
+        </activity>
+        <activity
+            android:name=".QTC"
+            android:label="@string/title_activity_qtc" >
+        </activity>
+        <activity
+            android:name=".Bldg800"
+            android:label="@string/title_activity_bldg800" >
+        </activity>
     </application>
 
 </manifest>

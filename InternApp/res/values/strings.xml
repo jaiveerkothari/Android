@@ -17,5 +17,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="title_activity_bbc">BBC</string>
+    <string name="title_activity_batc">BATC</string>
+    <string name="title_activity_crown_point">CrownPoint</string>
+    <string name="title_activity_iwu">IWU</string>
+    <string name="title_activity_np1">NP1</string>
+    <string name="title_activity_np2">NP2</string>
+    <string name="title_activity_evendale">Evendale</string>
+    <string name="title_activity_princeton_hill">PrincetonHill</string>
+    <string name="title_activity_qtc">QTC</string>
+    <string name="title_activity_bldg800">Bldg800</string>
 
 </resources>

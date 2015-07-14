@@ -2097,9 +2097,13 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_select_dialog_material=0x7f030017;
         public static final int abc_simple_dropdown_hint=0x7f030018;
-        public static final int activity_bbc=0x7f030019;
-        public static final int activity_faq=0x7f03001a;
-        public static final int activity_item_detail=0x7f03001b;
+        public static final int activity_batc=0x7f030019;
+        public static final int activity_bbc=0x7f03001a;
+        public static final int activity_bldg800=0x7f03001b;
+        public static final int activity_crown_point=0x7f03001c;
+        public static final int activity_evendale=0x7f03001d;
+        public static final int activity_faq=0x7f03001e;
+        public static final int activity_item_detail=0x7f03001f;
         /** 
     Layout alias to replace the single-pane version of the layout with a
     two-pane version on Large screens.
@@ -2115,27 +2119,32 @@ containing a value of this type.
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     
          */
-        public static final int activity_item_list=0x7f03001c;
-        public static final int activity_item_twopane=0x7f03001d;
-        public static final int activity_main=0x7f03001e;
-        public static final int activity_map=0x7f03001f;
-        public static final int activity_onboarding_resources=0x7f030020;
-        public static final int activity_user_search=0x7f030021;
-        public static final int fragment_item_detail=0x7f030022;
-        public static final int fragment_map=0x7f030023;
-        public static final int fragment_navigation_drawer=0x7f030024;
-        public static final int notification_media_action=0x7f030025;
-        public static final int notification_media_cancel_action=0x7f030026;
-        public static final int notification_template_big_media=0x7f030027;
-        public static final int notification_template_big_media_narrow=0x7f030028;
-        public static final int notification_template_lines=0x7f030029;
-        public static final int notification_template_media=0x7f03002a;
-        public static final int notification_template_part_chronometer=0x7f03002b;
-        public static final int notification_template_part_time=0x7f03002c;
-        public static final int select_dialog_item_material=0x7f03002d;
-        public static final int select_dialog_multichoice_material=0x7f03002e;
-        public static final int select_dialog_singlechoice_material=0x7f03002f;
-        public static final int support_simple_spinner_dropdown_item=0x7f030030;
+        public static final int activity_item_list=0x7f030020;
+        public static final int activity_item_twopane=0x7f030021;
+        public static final int activity_iwu=0x7f030022;
+        public static final int activity_main=0x7f030023;
+        public static final int activity_map=0x7f030024;
+        public static final int activity_np1=0x7f030025;
+        public static final int activity_np2=0x7f030026;
+        public static final int activity_onboarding_resources=0x7f030027;
+        public static final int activity_princeton_hill=0x7f030028;
+        public static final int activity_qtc=0x7f030029;
+        public static final int activity_user_search=0x7f03002a;
+        public static final int fragment_item_detail=0x7f03002b;
+        public static final int fragment_map=0x7f03002c;
+        public static final int fragment_navigation_drawer=0x7f03002d;
+        public static final int notification_media_action=0x7f03002e;
+        public static final int notification_media_cancel_action=0x7f03002f;
+        public static final int notification_template_big_media=0x7f030030;
+        public static final int notification_template_big_media_narrow=0x7f030031;
+        public static final int notification_template_lines=0x7f030032;
+        public static final int notification_template_media=0x7f030033;
+        public static final int notification_template_part_chronometer=0x7f030034;
+        public static final int notification_template_part_time=0x7f030035;
+        public static final int select_dialog_item_material=0x7f030036;
+        public static final int select_dialog_multichoice_material=0x7f030037;
+        public static final int select_dialog_singlechoice_material=0x7f030038;
+        public static final int support_simple_spinner_dropdown_item=0x7f030039;
     }
     public static final class menu {
         public static final int faq=0x7f0c0000;
@@ -2218,11 +2227,20 @@ containing a value of this type.
          [CHAR LIMIT=4] 
          */
         public static final int status_bar_notification_info_overflow=0x7f0a0011;
+        public static final int title_activity_batc=0x7f0a0022;
         public static final int title_activity_bbc=0x7f0a0021;
+        public static final int title_activity_bldg800=0x7f0a002a;
+        public static final int title_activity_crown_point=0x7f0a0023;
+        public static final int title_activity_evendale=0x7f0a0027;
         public static final int title_activity_faq=0x7f0a0017;
+        public static final int title_activity_iwu=0x7f0a0024;
         public static final int title_activity_main=0x7f0a0014;
         public static final int title_activity_map=0x7f0a0019;
+        public static final int title_activity_np1=0x7f0a0025;
+        public static final int title_activity_np2=0x7f0a0026;
         public static final int title_activity_onboarding_resources=0x7f0a0018;
+        public static final int title_activity_princeton_hill=0x7f0a0028;
+        public static final int title_activity_qtc=0x7f0a0029;
         public static final int title_activity_user_search=0x7f0a001a;
         public static final int title_item_detail=0x7f0a0013;
         public static final int title_section1=0x7f0a001b;
