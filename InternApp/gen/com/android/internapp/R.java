@@ -2730,6 +2730,8 @@ containing a value of this type.
          */
         public static final int Widget_AppCompat_Toolbar=0x7f0b0042;
         public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b0043;
+        public static final int txt_faq_a=0x7f0b0127;
+        public static final int txt_faq_q=0x7f0b0126;
     }
     public static final class styleable {
         /**  ============================================ 
