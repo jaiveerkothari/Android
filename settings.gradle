@@ -1,0 +1,2 @@
+include ':InternApp'
+include ':appcompat_v7'
