@@ -7,21 +7,32 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.android.internapp.FAQ" >
-
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/faq_page_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="89dp"
-        android:layout_marginTop="176dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="FAQ" />
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:text="@string/faq_heading" />
+    
+    <!-- activity_info layout file -->
+	<!-- Clickable title -->
+	<TextView   android:id="@+id/help_title_gest"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/faq_page_heading"
+		        android:layout_below="@+id/faq_page_heading"
+	           
+	            android:text="TITLE"
+	            android:clickable="true"
+	            android:onClick="toggle_contents"/>
+	 
+	<!--content to hide/show -->
+	<TextView   android:id="@+id/txt_help_gest"
+	            
+		        
+	            android:text="YAYAYAYAYAYAYYAAYAYAYYAYAYAYA" />
+    
+   
 </RelativeLayout>

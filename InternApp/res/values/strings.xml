@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">InternApp</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="title_activity_main">MainActivity</string>
@@ -16,6 +15,29 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+    <string name="faq_heading">Frequently Asked Questions</string>
+    <string name="q1">If my drive is less than 400 miles one way, will i still get reimbursed for mileage?</string>
+    <string name="q2">Can I fly to my work location, then drive back and still get reimbursed for both the flight and the mileage?</string>
+    <string name="q3">Can I take the AutoTrain and get reimbursed for the AutoTrain and claim the mileage of the trip as well?</string>
+    <string name="q4">Can I buy a 1 way flight ticket to my work location and then buy another 1 way ticket for the way back since I dont know my end date yet?</string>
+    <string name="q5">Can I get $35 a day for meals even If i spend only $20?</string>
+    <string name="a1">Yes, you need to note the miles on the T&amp;L form and include the MapQuest map</string>
+    <string name="a2">You need to get permission from Kim Demko first. Then get a reciept for the fuel.</string>
+    <string name="a3">AutoTrains are never reimbursed</string>
+    <string name="a4">All end dates are on the co-op intern website. </string>
+    <string name="a5">No it is not per diem. It is the max allowance. </string>
+    <string name="q6">can I provide a credit card billing statement instead of receipts?</string>
+    <string name="a6">No, must be a copy of the itemized receipt showing date and city.</string>
+    <string name="q7">Can I get reimbursed in advance for my baggage fees, hotels or tolls for my return trip? </string>
+    <string name="a7">No, we must have paid receipts for those items.</string>
+    <string name="q8">If my friend or family member drives with me to my work location, can I get reimbursed for their meals/hotel costs? </string>
+    <string name="a8">No, GE only reimburses items that the employee incurs.</string>
+    <string name="q9">Can I submit a T&amp;L form for reimbursement even if it more than 2 weeks after my end date?</string>
+    <string name="a9">No, due to accounting practices we are not able to process 2 weeks past your end date.</string>
+    <string name="q10">If for any reason I have to leave my rotation earlier than the expected end date, do I still get to keep the full reimbursement?</string>
+    <string name="a10">No, it will be prorated for the actual weeks that you were working. Payroll would send you an overpayment letter for the recoupment of funds.</string>
+    <string name="q11">If I am unsure whether an item can be reimbursed what shouldI do?</string>
+    <string name="a11">PRIOR to making an travel arrangements or actually travelling you must email Aviation.CoopTLforms@ge.com to get approval.</string>
     <string name="title_activity_bbc">BBC</string>
     <string name="title_activity_batc">BATC</string>
     <string name="title_activity_crown_point">CrownPoint</string>
@@ -26,5 +48,5 @@
     <string name="title_activity_princeton_hill">PrincetonHill</string>
     <string name="title_activity_qtc">QTC</string>
     <string name="title_activity_bldg800">Bldg800</string>
-
+    
 </resources>
