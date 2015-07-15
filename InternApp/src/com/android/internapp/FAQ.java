@@ -13,17 +13,17 @@ public class FAQ extends ActionBarActivity {
 		setContentView(R.layout.activity_faq);
 		
 		//Log.i("Faq Activity","onCreate");
-		txt_help_gest=(TextView) findViewById(R.id.txt_help_gest);
+		//txt_help_gest=(TextView) findViewById(R.id.txt_help_gest);
 	    // hide until its title is clicked
-	    txt_help_gest.setVisibility(View.GONE);
+	   // txt_help_gest.setVisibility(View.GONE);
 		
 	}
 	
-	public void toggle_contents(View v){
-	      txt_help_gest.setVisibility( txt_help_gest.isShown()
-	                          ? View.GONE
-	                          : View.VISIBLE );
-	}
+//	public void toggle_contents(View v){
+//	      txt_help_gest.setVisibility( txt_help_gest.isShown()
+//	                          ? View.GONE
+//	                          : View.VISIBLE );
+//	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

@@ -7,18 +7,73 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.android.internapp.FAQ" >
-    <TextView
+    
+    <!-- <TextView
         android:id="@+id/faq_page_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:textStyle="bold"
-        android:text="@string/faq_heading" />
+        android:text="@string/faq_heading" /> -->
+    
+    <!-- <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" /> -->
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/faq_page_heading"
+        android:text="@string/q1" />
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/q1"
+        android:text="@string/a1" />
+    
+	<TextView
+        android:id="@+id/q2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/a1"
+        android:text="@string/q2" />
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/q2"
+        android:text="@string/a2" />
+    
+    <TextView
+        android:id="@+id/q3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/a2"
+        android:text="@string/q3" />
+    <TextView
+        android:id="@+id/a3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/faq_page_heading"
+        android:layout_below="@+id/q3"
+        android:text="@string/a3" />
+    
+    
     
     <!-- activity_info layout file -->
 	<!-- Clickable title -->
-	<TextView   android:id="@+id/help_title_gest"
+	
+	<!-- <TextView   
+	    		android:id="@+id/help_title_gest"
 	            android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_alignLeft="@+id/faq_page_heading"
@@ -26,13 +81,16 @@
 	           
 	            android:text="TITLE"
 	            android:clickable="true"
-	            android:onClick="toggle_contents"/>
+	            android:onClick="toggle_contents"
+	            
+	            /> -->
 	 
 	<!--content to hide/show -->
-	<TextView   android:id="@+id/txt_help_gest"
+	
+	<!-- <TextView   android:id="@+id/txt_help_gest"
 	            
 		        
-	            android:text="YAYAYAYAYAYAYYAAYAYAYYAYAYAYA" />
+	            android:text="YAYAYAYAYAYAYYAAYAYAYYAYAYAYA" /> -->
     
    
 </RelativeLayout>
