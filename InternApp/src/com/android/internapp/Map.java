@@ -24,7 +24,7 @@ public class Map extends ListActivity
             new ListItem("Indiana Wesleyan University", IWU.class), 
             new ListItem("North Pointe 1", NP1.class), 
             new ListItem("North Pointe 2", NP2.class), 
-            new ListItem("Princeton Hill", PrincetonHill.class), 
+            new ListItem("Princeton Hill (CTEC)", PrincetonHill.class), 
             new ListItem("Quality Technology Center", QTC.class)};
 
     @Override

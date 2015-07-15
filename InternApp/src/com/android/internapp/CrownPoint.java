@@ -13,6 +13,10 @@ public class CrownPoint extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_crown_point);
+		Intent intent2 = new Intent();
+		intent2.setClass(this, Map.class);
+		intent2.putExtra("EXTRA_ID", "SOME DATAS");
+		startActivity(intent2);
 		String uri = "geo:0,0?q=1%20Crowne%20Point%20Court%2C%20Sharonville%2C%20Ohio%2045241";
 		Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
 		intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
