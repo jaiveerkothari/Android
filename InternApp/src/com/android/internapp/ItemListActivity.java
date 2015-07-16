@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.app.Application; 
 
-import com.parse.Parse; 
-import com.parse.ParseObject;
+//import com.parse.Parse; 
+//import com.parse.ParseObject;
 
 /**
  * An activity representing a list of Items. This activity has different
@@ -38,13 +38,7 @@ public class ItemListActivity extends FragmentActivity implements
 		setContentView(R.layout.activity_item_list);
 
 		
-		// Enable Local Datastore.
-		Parse.enableLocalDatastore(this);
-		 
-		Parse.initialize(this, "ctvsaP9fdLmpgi5OlE7qJf4Zu1zh5lThoCWooSyi", "GJM1loSMOB9NF6ZLkMiC4YlIjONLnQ4LKNOihuNf");
-		ParseObject testObject = new ParseObject("TestObject");
-		testObject.put("foo", "bar");
-		testObject.saveInBackground();
+
 		
 		
 		if (findViewById(R.id.item_detail_container) != null) {

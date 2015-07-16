@@ -32,12 +32,22 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import com.parse.Parse; 
+import com.parse.ParseObject;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 //import com.android.InternApp.Map;
 //import com.parse.anywall.LoginActivity;
 //import com.parse.anywall.R;
+
 
 /**
  * A login screen that offers login via email/password.
@@ -67,11 +77,23 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		// Enable Local Datastore.
+		Parse.enableLocalDatastore(this);
+		 
+		Parse.initialize(this, "ctvsaP9fdLmpgi5OlE7qJf4Zu1zh5lThoCWooSyi", "GJM1loSMOB9NF6ZLkMiC4YlIjONLnQ4LKNOihuNf");
 
 		// Set up the login form.
 		mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
 		populateAutoComplete();
-
+		Button actionButton = (Button) findViewById(R.id.button1);
+	    actionButton.setOnClickListener(new View.OnClickListener() {
+	      public void onClick(View view) {
+	    	Intent intent2 = new Intent();
+	  		intent2.setClass(LoginActivity.this, SignUpActivity.class);
+	  		intent2.putExtra("EXTRA_ID", "SOME DATAS");
+	  		startActivity(intent2);;
+	      }
+	    });
 		mPasswordView = (EditText) findViewById(R.id.password);
 		mPasswordView
 				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -192,7 +214,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 		// TODO: Replace this with your own logic
 		return password.length() > 4;
 	}
-
+	
 	/**
 	 * Shows the progress UI and hides the login form.
 	 */
