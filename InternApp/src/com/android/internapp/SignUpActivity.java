@@ -110,8 +110,11 @@ public class SignUpActivity extends Activity {
     user.setUsername(username);
     user.setPassword(password);
     //user.setEmail(username);
-    //user.put("firstName", firstname);
-    //user.put("lastName", lastname);
+    user.put("firstName", firstname);
+    user.put("lastName", lastname);
+    user.put("email", username);
+    user.put("location", "Evendale, OH");
+    user.put("program", "EID Intern");
     // Call the Parse signup method
     user.signUpInBackground(new SignUpCallback() {
       @Override
