@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string-array name="planets_array">
+        <item>Electrical Engr</item>
+        <item>Computer Engr</item>
+        <item>Computer Science</item>
+        <item>Supply Chain</item>
+        <item>Finance</item>
+        <item>IT</item>
+        <item>Aerospace Engr</item>
+        <item>Mechanical Engr</item>
+    </string-array>
     <string name="app_name">InternApp</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="title_activity_main">MainActivity</string>

@@ -25,9 +25,13 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +45,7 @@ import com.parse.SignUpCallback;
 /**
  * Activity which displays a login screen to the user.
  */
-public class SignUpActivity extends Activity {
+public class SignUpActivity extends Activity implements OnItemSelectedListener{
   // UI references.
   private EditText usernameEditText;
   private EditText passwordEditText;
@@ -59,8 +63,21 @@ public class SignUpActivity extends Activity {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_signup);
-
+ 
+    
+    		
     // Set up the signup form.
+    Spinner spinner = (Spinner) findViewById(R.id.major_text);
+    
+ // Create an ArrayAdapter using the string array and a default spinner layout
+ ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+         R.array.planets_array, android.R.layout.simple_spinner_item);
+ // Specify the layout to use when the list of choices appears
+ adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+ // Apply the adapter to the spinner
+ spinner.setAdapter(adapter);
+ spinner.setPrompt("Select a Major");
+ spinner.setOnItemSelectedListener(this);    
     usernameEditText = (EditText) findViewById(R.id.username_edit_text);
     firstnameEditText = (EditText) findViewById(R.id.firstname_text);
     lastnameEditText = (EditText) findViewById(R.id.lastname_text);
@@ -87,7 +104,15 @@ public class SignUpActivity extends Activity {
     });
   }
 
-  
+  public void onItemSelected(AdapterView<?> parent, View view, 
+          int pos, long id) {
+      // An item was selected. You can retrieve the selected item using
+      // parent.getItemAtPosition(pos)
+  }
+
+  public void onNothingSelected(AdapterView<?> parent) {
+      // Another interface callback
+  }
   
   private byte[] readInFile(String path) throws IOException {
 	    // TODO Auto-generated method stub

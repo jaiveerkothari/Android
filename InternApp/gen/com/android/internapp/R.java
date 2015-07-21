@@ -20,6 +20,9 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040008;
         public static final int abc_slide_out_top=0x7f040009;
     }
+    public static final class array {
+        public static final int planets_array=0x7f0c0000;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1944,7 +1947,7 @@ containing a value of this type.
         public static final int a7=0x7f09005d;
         public static final int a8=0x7f09005f;
         public static final int a9=0x7f090061;
-        public static final int action0=0x7f090088;
+        public static final int action0=0x7f090089;
         public static final int action_bar=0x7f090040;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f09003f;
@@ -1952,15 +1955,15 @@ containing a value of this type.
         public static final int action_bar_spinner=0x7f090002;
         public static final int action_bar_subtitle=0x7f090024;
         public static final int action_bar_title=0x7f090023;
-        public static final int action_button=0x7f090084;
+        public static final int action_button=0x7f090085;
         public static final int action_context_bar=0x7f090041;
-        public static final int action_divider=0x7f09008c;
+        public static final int action_divider=0x7f09008d;
         public static final int action_menu_divider=0x7f090005;
         public static final int action_menu_presenter=0x7f090006;
         public static final int action_mode_bar=0x7f09003d;
         public static final int action_mode_bar_stub=0x7f09003c;
         public static final int action_mode_close_button=0x7f090025;
-        public static final int action_settings=0x7f090095;
+        public static final int action_settings=0x7f090096;
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
@@ -1968,9 +1971,9 @@ containing a value of this type.
         public static final int beginning=0x7f090020;
         public static final int button1=0x7f09006f;
         public static final int buttonPanel=0x7f090036;
-        public static final int cancel_action=0x7f090089;
+        public static final int cancel_action=0x7f09008a;
         public static final int checkbox=0x7f090038;
-        public static final int chronometer=0x7f09008f;
+        public static final int chronometer=0x7f090090;
         public static final int collapseActionView=0x7f09001a;
         public static final int container=0x7f09007b;
         public static final int contentPanel=0x7f090031;
@@ -1991,7 +1994,7 @@ containing a value of this type.
         public static final int email_login_form=0x7f09006a;
         public static final int email_sign_in_button=0x7f09006e;
         public static final int end=0x7f090021;
-        public static final int end_padder=0x7f090094;
+        public static final int end_padder=0x7f090095;
         public static final int expand_activities_button=0x7f090027;
         public static final int expanded_menu=0x7f090037;
         public static final int faq_page_heading=0x7f090050;
@@ -2001,20 +2004,21 @@ containing a value of this type.
         public static final int icon=0x7f09002b;
         public static final int ifRoom=0x7f09001b;
         public static final int image=0x7f090028;
-        public static final int info=0x7f090093;
-        public static final int item_detail=0x7f090086;
+        public static final int info=0x7f090094;
+        public static final int item_detail=0x7f090087;
         public static final int item_detail_container=0x7f090066;
         public static final int item_list=0x7f090067;
         public static final int lastname_text=0x7f090083;
-        public static final int line1=0x7f09008d;
-        public static final int line3=0x7f090091;
+        public static final int line1=0x7f09008e;
+        public static final int line3=0x7f090092;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f09002a;
         public static final int login=0x7f09006d;
         public static final int login_form=0x7f090069;
         public static final int login_progress=0x7f090068;
         public static final int mainContent=0x7f090072;
-        public static final int media_actions=0x7f09008b;
+        public static final int major_text=0x7f090084;
+        public static final int media_actions=0x7f09008c;
         public static final int middle=0x7f090022;
         public static final int multiply=0x7f090014;
         public static final int navList=0x7f090079;
@@ -2053,7 +2057,7 @@ containing a value of this type.
         public static final int search_plate=0x7f090048;
         public static final int search_src_text=0x7f090049;
         public static final int search_voice_btn=0x7f09004d;
-        public static final int section_label=0x7f090087;
+        public static final int section_label=0x7f090088;
         public static final int select_dialog_listview=0x7f09004e;
         public static final int selection=0x7f090070;
         public static final int shortcut=0x7f090039;
@@ -2065,15 +2069,15 @@ containing a value of this type.
         public static final int src_atop=0x7f090016;
         public static final int src_in=0x7f090017;
         public static final int src_over=0x7f090018;
-        public static final int status_bar_latest_event_content=0x7f09008a;
-        public static final int subTitle=0x7f090085;
+        public static final int status_bar_latest_event_content=0x7f09008b;
+        public static final int subTitle=0x7f090086;
         public static final int submit_area=0x7f09004b;
         public static final int tabMode=0x7f09000c;
-        public static final int text=0x7f090092;
-        public static final int text2=0x7f090090;
+        public static final int text=0x7f090093;
+        public static final int text2=0x7f090091;
         public static final int textSpacerNoButtons=0x7f090033;
         public static final int textView1=0x7f090073;
-        public static final int time=0x7f09008e;
+        public static final int time=0x7f09008f;
         public static final int title=0x7f09002c;
         public static final int title_template=0x7f09002f;
         public static final int topPanel=0x7f09002e;
@@ -2203,12 +2207,12 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f030040;
     }
     public static final class menu {
-        public static final int faq=0x7f0c0000;
-        public static final int global=0x7f0c0001;
-        public static final int main=0x7f0c0002;
-        public static final int map=0x7f0c0003;
-        public static final int onboarding_resources=0x7f0c0004;
-        public static final int user_search=0x7f0c0005;
+        public static final int faq=0x7f0d0000;
+        public static final int global=0x7f0d0001;
+        public static final int main=0x7f0d0002;
+        public static final int map=0x7f0d0003;
+        public static final int onboarding_resources=0x7f0d0004;
+        public static final int user_search=0x7f0d0005;
     }
     public static final class string {
         public static final int a1=0x7f0a0027;
@@ -2286,27 +2290,29 @@ containing a value of this type.
         public static final int action_sign_in=0x7f0a0048;
         public static final int action_sign_in_short=0x7f0a0049;
         public static final int app_name=0x7f0a0012;
-        public static final int error_blank_password=0x7f0a0056;
-        public static final int error_blank_username=0x7f0a0055;
-        public static final int error_end=0x7f0a0059;
+        public static final int error_blank_password=0x7f0a0058;
+        public static final int error_blank_username=0x7f0a0057;
+        public static final int error_end=0x7f0a005b;
         public static final int error_field_required=0x7f0a004d;
         public static final int error_incorrect_password=0x7f0a004c;
-        public static final int error_intro=0x7f0a0054;
+        public static final int error_intro=0x7f0a0056;
         public static final int error_invalid_email=0x7f0a004a;
         public static final int error_invalid_password=0x7f0a004b;
-        public static final int error_join=0x7f0a0058;
-        public static final int error_mismatched_passwords=0x7f0a0057;
+        public static final int error_join=0x7f0a005a;
+        public static final int error_mismatched_passwords=0x7f0a0059;
         public static final int faq_heading=0x7f0a0021;
         public static final int hello_world=0x7f0a0015;
         public static final int navigation_drawer_close=0x7f0a001f;
         public static final int navigation_drawer_open=0x7f0a001e;
-        public static final int progress_login=0x7f0a005a;
-        public static final int progress_signup=0x7f0a005b;
+        public static final int progress_login=0x7f0a005c;
+        public static final int progress_signup=0x7f0a005d;
+        public static final int prompt_college=0x7f0a0054;
         /**  Strings related to login 
          */
         public static final int prompt_email=0x7f0a0047;
         public static final int prompt_firstname=0x7f0a0052;
         public static final int prompt_lastname=0x7f0a0053;
+        public static final int prompt_major=0x7f0a0055;
         public static final int prompt_password=0x7f0a0050;
         public static final int prompt_password_again=0x7f0a0051;
         public static final int prompt_username=0x7f0a004f;
@@ -2321,7 +2327,7 @@ containing a value of this type.
         public static final int q7=0x7f0a002e;
         public static final int q8=0x7f0a0030;
         public static final int q9=0x7f0a0032;
-        public static final int signup=0x7f0a005c;
+        public static final int signup=0x7f0a005e;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized

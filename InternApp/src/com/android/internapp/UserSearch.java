@@ -62,7 +62,7 @@ ArrayAdapter<String> listAdapter;
 	                	String firstname = user.getString("firstName");
 	                	String lastname = user.getString("lastName");
 	                	userFullNames.add(firstname + " " + lastname);
-	                	listAdapter.add(firstname);
+	                	listAdapter.insert(firstname + " " + lastname, 0);
 	                	
 	                	
 	                    //Use this list of ParseUser (numberList) in an ArrayAdapter
@@ -85,19 +85,14 @@ ArrayAdapter<String> listAdapter;
         listAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1);
         final ListView playerlv = (ListView)findViewById(android.R.id.list);
-        
+        playerlv.setAdapter(listAdapter);
         List<String> numbers = new ArrayList<String>();
 		numbers.add("3");
 		numbers.add("4");
 		getFriends(numbers);
-		for (String name2: userFullNames) {
-			listAdapter.clear();
-			listAdapter.insert(name2, 1);
-			listAdapter.add(name2);
-		}
-		listAdapter.notifyDataSetChanged();
-        listAdapter.add("name");
-        listAdapter.notifyDataSetChanged();
+		//listAdapter.notifyDataSetChanged();
+        //listAdapter.add("name");
+        //listAdapter.notifyDataSetChanged();
         
         
 //        List<ParseQuery<ParseUser>> queries = new ArrayList<ParseQuery<ParseUser>>();
