@@ -7,10 +7,12 @@
     <ScrollView
         android:id="@+id/signup_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="280dp" >
 
         <LinearLayout
             style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="482dp"
             android:orientation="vertical" >
 
             <EditText
@@ -30,28 +32,27 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true" />
-            
+
             <EditText
                 android:id="@+id/password_again_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password_again"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true"
                 android:imeActionId="@+id/edittext_action_signup"
                 android:imeActionLabel="@string/signup"
-                android:imeOptions="actionUnspecified" />
-			
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
             <EditText
                 android:id="@+id/firstname_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_firstname"
-                
                 android:maxLines="1"
                 android:singleLine="true" />
-            
+
             <EditText
                 android:id="@+id/lastname_text"
                 android:layout_width="match_parent"
@@ -59,17 +60,18 @@
                 android:hint="@string/prompt_lastname"
                 android:maxLines="1"
                 android:singleLine="true" />
-            
+
             <Button
                 android:id="@+id/action_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
                 android:layout_marginTop="16dp"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
                 android:text="@string/signup" />
+
         </LinearLayout>
+
     </ScrollView>
 
 </merge>
