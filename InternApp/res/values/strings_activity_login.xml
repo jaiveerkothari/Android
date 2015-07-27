@@ -17,7 +17,7 @@
     <string name="prompt_firstname">First Name</string>
     <string name="prompt_lastname">Last Name</string>
     <string name="prompt_college">College</string>
-    <string name="prompt_major">College</string>
+    <string name="prompt_major">Major: </string>
     <string name="error_intro">"Please "</string>
     <string name="error_blank_username">enter a username</string>
     <string name="error_blank_password">enter a password</string>

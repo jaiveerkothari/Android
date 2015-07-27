@@ -4,6 +4,7 @@ import android.app.Fragment;
 //import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 //import android.support.v4.app.Fragment;
@@ -37,9 +38,12 @@ public class OnboardingResources extends ActionBarActivity {
 		setContentView(R.layout.activity_onboarding_resources);
 		
 		
-		 mNavItems.add(new NavItem("Home", "Meetup destination", R.drawable.ic_launcher));
-		    mNavItems.add(new NavItem("Preferences", "Change your preferences", R.drawable.ic_launcher));
-		    mNavItems.add(new NavItem("About", "Get to know about us", R.drawable.ic_launcher));
+		 	mNavItems.add(new NavItem("User Search", "Other interns", R.drawable.ic_launcher));
+		    mNavItems.add(new NavItem("Maps", "Find GE locations", R.drawable.ic_launcher));
+		    mNavItems.add(new NavItem("FAQ", "Frequently asked questions", R.drawable.ic_launcher));
+		    mNavItems.add(new NavItem("Onboarding Resources", "For getting used to the place", R.drawable.ic_launcher));
+		    mNavItems.add(new NavItem("Settings", "Change settings", R.drawable.ic_launcher));
+		    mNavItems.add(new NavItem("Logout", "Peace out homie", R.drawable.ic_launcher));
 		 
 		    // DrawerLayout
 		    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -65,13 +69,33 @@ public class OnboardingResources extends ActionBarActivity {
 	    * is selected.
 	    * */
 	    private void selectItemFromDrawer(int position) {
-	        Fragment fragment = new PreferencesFragment();
-	     
-	        FragmentManager fragmentManager = getFragmentManager();
-	        fragmentManager.beginTransaction()
-	                .replace(R.id.mainContent, fragment)
-	                .commit();
-	     
+//	        Fragment fragment = new PreferencesFragment();
+//	     
+//	        FragmentManager fragmentManager = getFragmentManager();
+//	        fragmentManager.beginTransaction()
+//	                .replace(R.id.mainContent, fragment)
+//	                .commit();
+	    	
+	    	if (position==0) {
+				Intent detailIntent1 = new Intent(this, UserSearch.class);
+				detailIntent1.putExtra(ItemDetailFragment.ARG_ITEM_ID, position);
+				startActivity(detailIntent1);
+			} else if(position==1) {
+				Intent detailIntent2 = new Intent(this, Map.class);
+				detailIntent2.putExtra(ItemDetailFragment.ARG_ITEM_ID, position);
+				startActivity(detailIntent2);	
+			} else if(position==2) {
+				Intent detailIntent3 = new Intent(this, FAQ.class);
+				detailIntent3.putExtra(ItemDetailFragment.ARG_ITEM_ID, position);
+				startActivity(detailIntent3);	
+			} else if(position==3) {
+				Intent detailIntent4 = new Intent(this, OnboardingResources.class);
+				detailIntent4.putExtra(ItemDetailFragment.ARG_ITEM_ID, position);
+				startActivity(detailIntent4);	
+			}
+	    	
+	    	
+			
 	        mDrawerList.setItemChecked(position, true);
 	        setTitle(mNavItems.get(position).mTitle);
 	     

@@ -1,6 +1,4 @@
 package com.android.internapp;
-
-
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -52,7 +50,9 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
   private EditText firstnameEditText;
   private EditText lastnameEditText;
   private EditText passwordAgainEditText;
+  private EditText collegeEditText;
   private static int RESULT_LOAD_IMAGE = 1;
+  private String major;
 
   Bitmap bmp;
   Intent i;
@@ -76,13 +76,15 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
  adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
  // Apply the adapter to the spinner
  spinner.setAdapter(adapter);
- spinner.setPrompt("Select a Major");
- spinner.setOnItemSelectedListener(this);    
+ spinner.setOnItemSelectedListener(this);
+ //spinner.setPrompt("Select a Major");
+
     usernameEditText = (EditText) findViewById(R.id.username_edit_text);
     firstnameEditText = (EditText) findViewById(R.id.firstname_text);
     lastnameEditText = (EditText) findViewById(R.id.lastname_text);
     passwordEditText = (EditText) findViewById(R.id.password_edit_text);
     passwordAgainEditText = (EditText) findViewById(R.id.password_again_edit_text);
+    collegeEditText = (EditText) findViewById(R.id.college_text);
     passwordAgainEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
       @Override
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -107,7 +109,7 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
   public void onItemSelected(AdapterView<?> parent, View view, 
           int pos, long id) {
       // An item was selected. You can retrieve the selected item using
-      // parent.getItemAtPosition(pos)
+      major = parent.getItemAtPosition(pos).toString();
   }
 
   public void onNothingSelected(AdapterView<?> parent) {
@@ -175,7 +177,7 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
 		    String firstname = firstnameEditText.getText().toString().trim();
 		    String lastname = lastnameEditText.getText().toString().trim();
 		    String passwordAgain = passwordAgainEditText.getText().toString().trim();
-		    
+		    String college = collegeEditText.getText().toString().trim();
 		    
 			ParseUser user = new ParseUser();
 		    user.setUsername(username);
@@ -186,7 +188,8 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
 		    user.put("email", username);
 		    user.put("location", "Evendale, OH");
 		    user.put("program", "EID Intern");
-			
+			user.put("college", college);
+			user.put("major", major);
 			
 			
 			

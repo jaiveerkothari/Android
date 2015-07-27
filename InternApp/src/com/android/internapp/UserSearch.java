@@ -6,11 +6,13 @@ import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -18,6 +20,8 @@ import com.parse.ParseUser;
 import android.support.v7.app.ActionBarActivity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -61,6 +65,23 @@ ArrayAdapter<String> listAdapter;
 	                	ParseUser user = numberList.get(i);
 	                	String firstname = user.getString("firstName");
 	                	String lastname = user.getString("lastName");
+	                	if (i == 1) {
+	                	ParseFile image = (ParseFile) user.get("profilePicture");
+	                	byte[] data;
+	                	try {
+	                		data = image.getData();
+	                		Bitmap bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
+		                    ImageView pic;
+	//
+		                    pic = (ImageView) findViewById(R.id.profilepic);
+		                    pic.setImageBitmap(bmp);
+						} catch (ParseException e1) {
+							data = null;
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+	                	}
+	                
 	                	userFullNames.add(firstname + " " + lastname);
 	                	listAdapter.insert(firstname + " " + lastname, 0);
 	                	
