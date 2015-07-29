@@ -47,14 +47,10 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
         
-        <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        
         
         <TextView
-            style="@style/txt_faq_a"
+            style="@style/txt_faq_q"
             android:id="@+id/or_hdr_first_day_chklist"
             
             android:layout_below="@+id/textView1"
@@ -103,7 +99,7 @@
             android:text="@string/or_chklist_7" />
         
         <TextView
-            style="@style/txt_faq_a"
+            style="@style/txt_faq_q"
             android:id="@+id/or_hdr_imp_contact_info"
             
             android:layout_below="@+id/or_chklist_7"
@@ -165,7 +161,7 @@
             android:text="@string/or_imp_contact_info_andrea_e" />
         
         <TextView
-            style="@style/txt_faq_a"
+            style="@style/txt_faq_q"
             android:id="@+id/or_tasks"
             
             android:layout_below="@+id/or_imp_contact_info_andrea_e"

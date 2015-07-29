@@ -28,8 +28,8 @@ public class OnboardingResources extends ActionBarActivity {
 	 
 	ListView mDrawerList;
 	RelativeLayout mDrawerPane;
-	private ActionBarDrawerToggle mDrawerToggle;
-	private DrawerLayout mDrawerLayout;
+	public ActionBarDrawerToggle mDrawerToggle;
+	public DrawerLayout mDrawerLayout;
 	 
 	ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
 	@Override
@@ -68,7 +68,7 @@ public class OnboardingResources extends ActionBarActivity {
 	    * Called when a particular item from the navigation drawer
 	    * is selected.
 	    * */
-	    private void selectItemFromDrawer(int position) {
+	    public void selectItemFromDrawer(int position) {
 //	        Fragment fragment = new PreferencesFragment();
 //	     
 //	        FragmentManager fragmentManager = getFragmentManager();

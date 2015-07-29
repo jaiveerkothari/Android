@@ -191,12 +191,20 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 		        dialog.dismiss();
 		        if (e != null) {
 		          // Show the error message
-		          Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+		          //Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+		          Intent intent2 = getIntent();
+		          //intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+		          //finish();
+		          startActivity(intent2);
+//		          Intent intent = new Intent(LoginActivity.this, Map.class);
+//		          startActivity(intent);
+		          //finish();
 		        } else {
 		          // Start an intent for the dispatch activity
 		          Intent intent = new Intent(LoginActivity.this, ItemListActivity.class);
 		          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 		          startActivity(intent);
+		          finish();
 		        }
 		      }
 		    });
@@ -377,7 +385,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 			}
 
 			// TODO: register the new account here.
-			return true;
+			return false;
 		}
 
 		@Override
@@ -387,10 +395,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
 			if (success) {
 				finish();
+				
 			} else {
 				mPasswordView
 						.setError(getString(R.string.error_incorrect_password));
 				mPasswordView.requestFocus();
+				showProgress(false);
+//				Intent intent = new Intent(LoginActivity.this, Map.class);
+//		          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//		          startActivity(intent);
 			}
 		}
 

@@ -1,29 +1,51 @@
 package com.android.internapp;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-public class FAQ extends ActionBarActivity {
+public class FAQ extends OnboardingResources { //ActionBarActivity {
 	TextView txt_help_gest;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_faq);
 		
-		//Log.i("Faq Activity","onCreate");
-		//txt_help_gest=(TextView) findViewById(R.id.txt_help_gest);
-	    // hide until its title is clicked
-	   // txt_help_gest.setVisibility(View.GONE);
+		mNavItems.add(new NavItem("User Search", "Other interns", R.drawable.ic_launcher));
+	    mNavItems.add(new NavItem("Maps", "Find GE locations", R.drawable.ic_launcher));
+	    mNavItems.add(new NavItem("FAQ", "Frequently asked questions", R.drawable.ic_launcher));
+	    mNavItems.add(new NavItem("Onboarding Resources", "For getting used to the place", R.drawable.ic_launcher));
+	    mNavItems.add(new NavItem("Settings", "Change settings", R.drawable.ic_launcher));
+	    mNavItems.add(new NavItem("Logout", "Peace out homie", R.drawable.ic_launcher));
+	 
+	    // DrawerLayout
+	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+	 
+	    // Populate the Navigtion Drawer with options
+	    mDrawerPane = (RelativeLayout) findViewById(R.id.drawerPane);
+	    mDrawerList = (ListView) findViewById(R.id.navList);
+	    DrawerListAdapter adapter = new DrawerListAdapter(this, mNavItems);
+	    mDrawerList.setAdapter(adapter);
+	 
+	    // Drawer Item click listeners
+	    mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+	        @Override
+	        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+	            selectItemFromDrawer(position);
+	        }
+	    });
 		
 	}
 	
-//	public void toggle_contents(View v){
-//	      txt_help_gest.setVisibility( txt_help_gest.isShown()
-//	                          ? View.GONE
-//	                          : View.VISIBLE );
-//	}
+	
+	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
