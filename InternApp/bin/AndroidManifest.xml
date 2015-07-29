@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
     <application
@@ -94,6 +94,14 @@
         <activity
             android:name=".Bldg800"
             android:label="@string/title_activity_bldg800" >
+        </activity>
+        <activity
+            android:name=".PreferencesFragment"
+            android:label="@string/title_activity_preferences_fragment" >
+        </activity>
+        <activity
+            android:name=".TestSideBar"
+            android:label="@string/title_activity_test_side_bar" >
         </activity>
     </application>
 
