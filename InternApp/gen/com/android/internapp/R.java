@@ -2211,30 +2211,31 @@ containing a value of this type.
         public static final int activity_np2=0x7f030028;
         public static final int activity_onboarding_resources=0x7f030029;
         public static final int activity_princeton_hill=0x7f03002a;
-        public static final int activity_qtc=0x7f03002b;
-        public static final int activity_sidebar2=0x7f03002c;
-        public static final int activity_signup=0x7f03002d;
-        public static final int activity_user_search=0x7f03002e;
-        public static final int drawer_item=0x7f03002f;
-        public static final int fragment_item_detail=0x7f030030;
-        public static final int fragment_map=0x7f030031;
-        public static final int fragment_navigation_drawer=0x7f030032;
-        public static final int fragment_navigation_drawer2=0x7f030033;
-        public static final int fragment_preferences=0x7f030034;
-        public static final int fragment_sidebar2=0x7f030035;
-        public static final int notification_media_action=0x7f030036;
-        public static final int notification_media_cancel_action=0x7f030037;
-        public static final int notification_template_big_media=0x7f030038;
-        public static final int notification_template_big_media_narrow=0x7f030039;
-        public static final int notification_template_lines=0x7f03003a;
-        public static final int notification_template_media=0x7f03003b;
-        public static final int notification_template_part_chronometer=0x7f03003c;
-        public static final int notification_template_part_time=0x7f03003d;
-        public static final int rounded=0x7f03003e;
-        public static final int select_dialog_item_material=0x7f03003f;
-        public static final int select_dialog_multichoice_material=0x7f030040;
-        public static final int select_dialog_singlechoice_material=0x7f030041;
-        public static final int support_simple_spinner_dropdown_item=0x7f030042;
+        public static final int activity_profile=0x7f03002b;
+        public static final int activity_qtc=0x7f03002c;
+        public static final int activity_sidebar2=0x7f03002d;
+        public static final int activity_signup=0x7f03002e;
+        public static final int activity_user_search=0x7f03002f;
+        public static final int drawer_item=0x7f030030;
+        public static final int fragment_item_detail=0x7f030031;
+        public static final int fragment_map=0x7f030032;
+        public static final int fragment_navigation_drawer=0x7f030033;
+        public static final int fragment_navigation_drawer2=0x7f030034;
+        public static final int fragment_preferences=0x7f030035;
+        public static final int fragment_sidebar2=0x7f030036;
+        public static final int notification_media_action=0x7f030037;
+        public static final int notification_media_cancel_action=0x7f030038;
+        public static final int notification_template_big_media=0x7f030039;
+        public static final int notification_template_big_media_narrow=0x7f03003a;
+        public static final int notification_template_lines=0x7f03003b;
+        public static final int notification_template_media=0x7f03003c;
+        public static final int notification_template_part_chronometer=0x7f03003d;
+        public static final int notification_template_part_time=0x7f03003e;
+        public static final int rounded=0x7f03003f;
+        public static final int select_dialog_item_material=0x7f030040;
+        public static final int select_dialog_multichoice_material=0x7f030041;
+        public static final int select_dialog_singlechoice_material=0x7f030042;
+        public static final int support_simple_spinner_dropdown_item=0x7f030043;
     }
     public static final class menu {
         public static final int faq=0x7f0d0000;
@@ -2242,7 +2243,9 @@ containing a value of this type.
         public static final int main=0x7f0d0002;
         public static final int map=0x7f0d0003;
         public static final int onboarding_resources=0x7f0d0004;
-        public static final int user_search=0x7f0d0005;
+        public static final int profile=0x7f0d0005;
+        public static final int testing123=0x7f0d0006;
+        public static final int user_search=0x7f0d0007;
     }
     public static final class string {
         public static final int a1=0x7f0a0027;
@@ -2317,19 +2320,19 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
         public static final int action_example=0x7f0a0020;
         public static final int action_settings=0x7f0a0016;
-        public static final int action_sign_in=0x7f0a0062;
-        public static final int action_sign_in_short=0x7f0a0063;
+        public static final int action_sign_in=0x7f0a0064;
+        public static final int action_sign_in_short=0x7f0a0065;
         public static final int app_name=0x7f0a0012;
-        public static final int error_blank_password=0x7f0a0072;
-        public static final int error_blank_username=0x7f0a0071;
-        public static final int error_end=0x7f0a0075;
-        public static final int error_field_required=0x7f0a0067;
-        public static final int error_incorrect_password=0x7f0a0066;
-        public static final int error_intro=0x7f0a0070;
-        public static final int error_invalid_email=0x7f0a0064;
-        public static final int error_invalid_password=0x7f0a0065;
-        public static final int error_join=0x7f0a0074;
-        public static final int error_mismatched_passwords=0x7f0a0073;
+        public static final int error_blank_password=0x7f0a0074;
+        public static final int error_blank_username=0x7f0a0073;
+        public static final int error_end=0x7f0a0077;
+        public static final int error_field_required=0x7f0a0069;
+        public static final int error_incorrect_password=0x7f0a0068;
+        public static final int error_intro=0x7f0a0072;
+        public static final int error_invalid_email=0x7f0a0066;
+        public static final int error_invalid_password=0x7f0a0067;
+        public static final int error_join=0x7f0a0076;
+        public static final int error_mismatched_passwords=0x7f0a0075;
         public static final int faq_heading=0x7f0a0021;
         public static final int hello_world=0x7f0a0015;
         public static final int navigation_drawer_close=0x7f0a001f;
@@ -2358,18 +2361,18 @@ containing a value of this type.
         public static final int or_tasks_c=0x7f0a005b;
         public static final int or_tasks_d=0x7f0a005c;
         public static final int or_tasks_e=0x7f0a005d;
-        public static final int progress_login=0x7f0a0076;
-        public static final int progress_signup=0x7f0a0077;
-        public static final int prompt_college=0x7f0a006e;
+        public static final int progress_login=0x7f0a0078;
+        public static final int progress_signup=0x7f0a0079;
+        public static final int prompt_college=0x7f0a0070;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f0a0061;
-        public static final int prompt_firstname=0x7f0a006c;
-        public static final int prompt_lastname=0x7f0a006d;
-        public static final int prompt_major=0x7f0a006f;
-        public static final int prompt_password=0x7f0a006a;
-        public static final int prompt_password_again=0x7f0a006b;
-        public static final int prompt_username=0x7f0a0069;
+        public static final int prompt_email=0x7f0a0063;
+        public static final int prompt_firstname=0x7f0a006e;
+        public static final int prompt_lastname=0x7f0a006f;
+        public static final int prompt_major=0x7f0a0071;
+        public static final int prompt_password=0x7f0a006c;
+        public static final int prompt_password_again=0x7f0a006d;
+        public static final int prompt_username=0x7f0a006b;
         public static final int q1=0x7f0a0022;
         public static final int q10=0x7f0a0034;
         public static final int q11=0x7f0a0036;
@@ -2381,7 +2384,7 @@ containing a value of this type.
         public static final int q7=0x7f0a002e;
         public static final int q8=0x7f0a0030;
         public static final int q9=0x7f0a0032;
-        public static final int signup=0x7f0a0078;
+        public static final int signup=0x7f0a007a;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized
@@ -2398,7 +2401,7 @@ containing a value of this type.
         public static final int title_activity_home=0x7f0a005f;
         public static final int title_activity_item_list=0x7f0a0043;
         public static final int title_activity_iwu=0x7f0a003b;
-        public static final int title_activity_login=0x7f0a0060;
+        public static final int title_activity_login=0x7f0a0062;
         public static final int title_activity_main=0x7f0a0014;
         public static final int title_activity_map=0x7f0a0019;
         public static final int title_activity_np1=0x7f0a003c;
@@ -2433,11 +2436,13 @@ containing a value of this type.
          */
         public static final int title_activity_preferences_fragment=0x7f0a0045;
         public static final int title_activity_princeton_hill=0x7f0a003f;
+        public static final int title_activity_profile=0x7f0a0061;
         public static final int title_activity_qtc=0x7f0a0040;
         public static final int title_activity_sidebar2=0x7f0a0044;
         public static final int title_activity_sign_up=0x7f0a0042;
-        public static final int title_activity_signup=0x7f0a0068;
+        public static final int title_activity_signup=0x7f0a006a;
         public static final int title_activity_test_side_bar=0x7f0a0046;
+        public static final int title_activity_testing123=0x7f0a0060;
         public static final int title_activity_user_search=0x7f0a001a;
         public static final int title_item_detail=0x7f0a0013;
         public static final int title_section1=0x7f0a001b;

@@ -116,5 +116,7 @@
     <string name="or_tasks_e"> &#8226; Update Phone Number in Outlook</string>
     <string name="or_first_day_chlist_heading">1st day checklist</string>
     <string name="title_activity_home">Home</string>
+    <string name="title_activity_testing123">Testing123</string>
+    <string name="title_activity_profile">Profile</string>
 
 </resources>

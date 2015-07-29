@@ -17,12 +17,7 @@ public class FAQ extends OnboardingResources { //ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_faq);
 		
-		mNavItems.add(new NavItem("User Search", "Other interns", R.drawable.ic_launcher));
-	    mNavItems.add(new NavItem("Maps", "Find GE locations", R.drawable.ic_launcher));
-	    mNavItems.add(new NavItem("FAQ", "Frequently asked questions", R.drawable.ic_launcher));
-	    mNavItems.add(new NavItem("Onboarding Resources", "For getting used to the place", R.drawable.ic_launcher));
-	    mNavItems.add(new NavItem("Settings", "Change settings", R.drawable.ic_launcher));
-	    mNavItems.add(new NavItem("Logout", "Peace out homie", R.drawable.ic_launcher));
+		
 	 
 	    // DrawerLayout
 	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);

@@ -32,7 +32,7 @@ import android.app.Application;
  * interface to listen for item selections.
  */
 public class ItemListActivity extends FragmentActivity implements
-		ItemListFragment.Callbacks {
+	ItemListFragment.Callbacks {
 	ArrayList<ParseUser> users;
 	ArrayList<String> userFullNames;
 	ListItem[] items;
@@ -123,7 +123,7 @@ public class ItemListActivity extends FragmentActivity implements
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
 			if (id.equals("1")) {
-				Intent detailIntent1 = new Intent(this, Home.class);
+				Intent detailIntent1 = new Intent(this, Profile.class);
 				detailIntent1.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
 				startActivity(detailIntent1);
 			} else if(id.equals("2")) {
