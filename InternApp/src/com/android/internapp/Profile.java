@@ -2,6 +2,8 @@ package com.android.internapp;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
@@ -17,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -28,38 +31,20 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
-public class Profile extends OnboardingResources {
+public class Profile extends Activity {
 	TextView profile1;
-	private static String TAG = OnboardingResources.class.getSimpleName();
-	 
-	ListView mDrawerList;
-	RelativeLayout mDrawerPane;
-	public ActionBarDrawerToggle mDrawerToggle;
-	public DrawerLayout mDrawerLayout;
-	 
-	ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
-		
-	    // DrawerLayout
-	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-	 
-	    // Populate the Navigtion Drawer with options
-	    mDrawerPane = (RelativeLayout) findViewById(R.id.drawerPane);
-	    mDrawerList = (ListView) findViewById(R.id.navList);
-	    DrawerListAdapter adapter = new DrawerListAdapter(this, mNavItems);
-	    mDrawerList.setAdapter(adapter);
-	 
-	    // Drawer Item click listeners
-	    mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-	        @Override
-	        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-	            selectItemFromDrawer(position);
-	        }
-	    });
-		
+		setContentView(R.layout.activity_profile);
+		final Button button = (Button) findViewById(R.id.editprofile);
+		final Intent detailIntent4 = new Intent(this, EditProfile.class);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+				startActivity(detailIntent4);
+            }
+        });
 		
 		
 		profile1 = (TextView) findViewById(R.id.profile1);
@@ -82,19 +67,14 @@ public class Profile extends OnboardingResources {
         		Canvas c = new Canvas(circleBitmap);
         		c.drawCircle(bmp.getWidth()/2, bmp.getHeight()/2, bmp.getWidth()/2, paint);
 
-        		        		
-        		
-        		
-        		
-        		
-        		
-        		
         		
         		bmp = getRoundedShape(bmp);
                 ImageView pic;
 
                 pic = (ImageView) findViewById(R.id.userpic);
+
                 pic.setImageBitmap(bmp);
+
                 //pic.setImageBitmap(circleBitmap);
 
 			} catch (ParseException e1) {
@@ -105,31 +85,15 @@ public class Profile extends OnboardingResources {
 		
 	}
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.profile, menu);
-		return true;
-	}
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+	
 	public Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
 		  // TODO Auto-generated method stub
-		  int targetWidth = 50;
-		  int targetHeight = 50;
+		  int targetWidth = 600;
+		  int targetHeight = 600;
 		  Bitmap targetBitmap = Bitmap.createBitmap(targetWidth, 
 		                            targetHeight,Bitmap.Config.ARGB_8888);
 		  
-		                Canvas canvas = new Canvas(targetBitmap);
+		 Canvas canvas = new Canvas(targetBitmap);
 		  Path path = new Path();
 		  path.addCircle(((float) targetWidth - 1) / 2,
 		  ((float) targetHeight - 1) / 2,

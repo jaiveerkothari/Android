@@ -15,7 +15,7 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:background">#ffffff</item>
+        <item name="android:background">#fffff0</item>
     </style>
     
     <style name="txt_faq_q" parent="@android:style/TextAppearance.Medium">

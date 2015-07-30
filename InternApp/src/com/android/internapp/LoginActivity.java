@@ -77,6 +77,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+
 		// Enable Local Datastore.
 		Parse.enableLocalDatastore(this);
 		 

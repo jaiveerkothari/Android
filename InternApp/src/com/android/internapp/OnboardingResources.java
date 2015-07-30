@@ -1,8 +1,6 @@
 package com.android.internapp;
 import java.util.ArrayList;
-import android.app.Fragment;
-//import android.app.Fragment;
-import android.app.FragmentManager;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,7 @@ import android.support.v4.app.ActionBarDrawerToggle;
 //import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+//import android.app.Fragment;
 public class OnboardingResources extends ActionBarActivity {
 	
 	
@@ -37,7 +37,7 @@ public class OnboardingResources extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_onboarding_resources);
 		
-		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		 	mNavItems.add(new NavItem("User Search", "Other interns", R.drawable.ic_launcher));
 		    mNavItems.add(new NavItem("Maps", "Find GE locations", R.drawable.ic_launcher));
 		    mNavItems.add(new NavItem("FAQ", "Frequently asked questions", R.drawable.ic_launcher));
@@ -53,7 +53,6 @@ public class OnboardingResources extends ActionBarActivity {
 		    mDrawerList = (ListView) findViewById(R.id.navList);
 		    DrawerListAdapter adapter = new DrawerListAdapter(this, mNavItems);
 		    mDrawerList.setAdapter(adapter);
-		 
 		    // Drawer Item click listeners
 		    mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		        @Override
@@ -61,7 +60,26 @@ public class OnboardingResources extends ActionBarActivity {
 		            selectItemFromDrawer(position);
 		        }
 		    });
-		
+		  
+//		    mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, 0, 0, 0) {
+//		        @Override
+//		        public void onDrawerOpened(View drawerView) {
+//		            super.onDrawerOpened(drawerView);
+//		     
+//		            invalidateOptionsMenu();
+//		        }
+//		     
+//		        @Override
+//		        public void onDrawerClosed(View drawerView) {
+//		            super.onDrawerClosed(drawerView);
+//		            Log.d(TAG, "onDrawerClosed: " + getTitle());
+//		     
+//		            invalidateOptionsMenu();
+//		        }
+//		    };
+//		     
+//		    mDrawerLayout.setDrawerListener(mDrawerToggle);
+//		    
 		    
 	}
 	/*
@@ -109,6 +127,12 @@ public class OnboardingResources extends ActionBarActivity {
 		getMenuInflater().inflate(R.menu.onboarding_resources, menu);
 		return true;
 	}
+//	public boolean onPrepareOptionsMenu(Menu menu) {
+//	    // If the nav drawer is open, hide action items related to the content view
+//	    boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+//	    menu.findItem(R.id.onboarding_resources).setVisible(!drawerOpen);
+//	    return super.onPrepareOptionsMenu(menu);
+//	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

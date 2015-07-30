@@ -63,6 +63,8 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_item_list">ItemListActivity</string>
     <string name="title_activity_sidebar2">Sidebar2</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
     <!--
     <string name="title_activity_preferences_fragment">PreferencesFragment</string>
 	<string name="or_hdr_first_day_chklist">I have the following items ready and with me for my 1st day</string>
@@ -118,5 +120,7 @@
     <string name="title_activity_home">Home</string>
     <string name="title_activity_testing123">Testing123</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_view_profile">ViewProfile</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
 
 </resources>
