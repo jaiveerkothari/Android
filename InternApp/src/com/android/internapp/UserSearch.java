@@ -27,7 +27,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 
-public class UserSearch extends Activity {
+public class UserSearch extends OnboardingResources {
 TextView selection;
 protected EditText sUsername; 
 ArrayList<String> userIDs;
@@ -116,6 +116,7 @@ ArrayAdapter<String> listAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_search);
+        
         selection = (TextView) findViewById(R.id.selection);
         sUsername = (EditText)findViewById(R.id.searchFriend);
         // Set up the listview

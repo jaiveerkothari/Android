@@ -65,32 +65,7 @@
     <string name="title_activity_sidebar2">Sidebar2</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
-    <!--
-    <string name="title_activity_preferences_fragment">PreferencesFragment</string>
-	<string name="or_hdr_first_day_chklist">I have the following items ready and with me for my 1st day</string>
-    <string name="or_chklist_1">First Day Form</string>
-    <string name="or_chklist_2">I-9 – My identification is original AND unexpired.</string>
-    <string name="or_chklist_3">I have 1 item from List A</string>
-    <string name="or_chklist_4">I have 2 items, 1 from List B and 1 from List C</string>
-    <string name="or_chklist_5">Badging – I have a US Passport, Birth Certificate, or Permanent Resident Card.  It is an original, copy, expired, or unexpired identification.</string>
-    <string name="or_chklist_6">Official Transcript</string>
-	<string name="or_chklist_7">I have read the Travel and Living Guidelines, Form, and Chart.</string>
-	<string name="or_hdr_imp_contact_info">Important Contact Information</string>
-	<string name="or_contact_info_help_desk_name">Help Desk</string>
-	<string name="or_imp_contact_info_hd_t">T. 513-552-4357</string>
-	<string name="or_imp_contact_info_kim">Kim Demko - Recruiter</string>
-	<string name="or_imp_contact_info_kim_t">T. 513-243-7193</string>
-	<string name="or_imp_contact_info_kim_e">E. kimberly.demko@ge.com</string>
-	<string name="or_imp_contact_info_andrea">Andrea Steindl – HR Administrator</string>
-	<string name="or_imp_contact_info_andrea_t">T. 513-243-5208</string>
-	<string name="or_imp_contact_info_andrea_e">E. andrea.steindl@ge.com</string>
-	<string name="or_tasks">List of Onboarding Tasks</string>
-	<string name="or_tasks_a">Request for Pin</string>
-	<string name="or_tasks_b">Setup Direct Deposit</string>
-	<string name="or_tasks_c">Update Picture in Support Central</string>
-	<string name="or_tasks_d">Verify Personal Information in Support Central</string>
-	<string name="or_tasks_e">Update Phone Number in Outlook</string>
-    -->
+    
     <string name="title_activity_preferences_fragment">PreferencesFragment</string>
     <string name="title_activity_test_side_bar">TestSideBar</string>
     <string name="or_hdr_first_day_chklist">I have the following items ready and with me for my 1st day</string>

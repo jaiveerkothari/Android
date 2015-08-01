@@ -2,6 +2,8 @@ package com.android.internapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-public class FAQ extends OnboardingResources { //ActionBarActivity {
+public class FAQ extends OnboardingResources { 
 	TextView txt_help_gest;
 	
 	@Override
@@ -35,7 +37,25 @@ public class FAQ extends OnboardingResources { //ActionBarActivity {
 	            selectItemFromDrawer(position);
 	        }
 	    });
-		
+	    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+	    mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
+	        @Override
+	        public void onDrawerOpened(View drawerView) {
+	            super.onDrawerOpened(drawerView);
+	     
+	            invalidateOptionsMenu();
+	        }
+	     
+	        @Override
+	        public void onDrawerClosed(View drawerView) {
+	            super.onDrawerClosed(drawerView);
+	           // Log.d(TAG, "onDrawerClosed: " + getTitle());
+	     
+	            invalidateOptionsMenu();
+	        }
+	    };
+	     
+	    mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
 	
 	
