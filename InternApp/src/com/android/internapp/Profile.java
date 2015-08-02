@@ -46,11 +46,28 @@ public class Profile extends Activity {
             }
         });
 		
+        
+        
+        
+        
+        
+        
 		
 		profile1 = (TextView) findViewById(R.id.profile1);
+		
 		ParseUser user = ParseUser.getCurrentUser();
-		String email = user.getString("firstName");
+		String email = user.getUsername();
+		String firstname = user.getString("firstName");
+	    String lastname = user.getString("lastName");
+	    String address = user.getString("address");
+	    String phonenumber = user.getString("phoneNumber");
+	    String college = user.getString("college");
+	    String major = user.getString("major");
+	    String about = user.getString("about");
+	    
+	    
 		profile1.setText(email);
+		
 		
         	ParseFile image = (ParseFile) user.get("profilePicture");
         	byte[] data;

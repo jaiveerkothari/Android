@@ -1,8 +1,18 @@
 package com.android.internapp;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
@@ -33,6 +45,7 @@ public class EditProfile extends Activity {
 	TextView t9;
 	EditText e9; 
 	ParseUser user;
+	private static int PICK_PHOTO_FOR_AVATAR = 1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,7 +59,13 @@ public class EditProfile extends Activity {
             }
         });
 		
-		
+        final Button button2 = (Button) findViewById(R.id.editpic);
+		final Intent detailIntent = new Intent(this, Profile.class);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	pickImage();
+            }
+        });
 		
 		t1 = (TextView) findViewById(R.id.t1);
         e1 = (EditText)findViewById(R.id.e1);
@@ -89,6 +108,79 @@ public class EditProfile extends Activity {
         
         
 	}
+	private byte[] readInFile(String path) throws IOException {
+	    // TODO Auto-generated method stub
+	    byte[] data = null;
+	    File file = new File(path);
+	    InputStream input_stream = new BufferedInputStream(new FileInputStream(file));
+	    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+	    data = new byte[16384]; // 16K
+	    int bytes_read;
+	    while ((bytes_read = input_stream.read(data, 0, data.length)) != -1) {
+	        buffer.write(data, 0, bytes_read);
+	    }
+	    input_stream.close();
+	    return buffer.toByteArray();
+
+	}
+  private String getRealPathFromURI(Uri contentURI) {
+	    String result;
+	    Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
+	    if (cursor == null) { // Source is Dropbox or other similar local file path
+	        result = contentURI.getPath();
+	    } else { 
+	        cursor.moveToFirst(); 
+	        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA); 
+	        result = cursor.getString(idx);
+	        cursor.close();
+	    }
+	    return result;
+	}
+	public void pickImage() {
+		  Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+		  intent.setType("image/*");
+		  
+		  startActivityForResult(intent, PICK_PHOTO_FOR_AVATAR);
+		}
+
+		@Override
+		public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		    super.onActivityResult(requestCode, resultCode, data);
+		    if (requestCode == PICK_PHOTO_FOR_AVATAR && resultCode == Activity.RESULT_OK) {
+		        if (data == null) {
+		            //Display an error
+		            return;
+		        }
+		        Uri selectedImageURI = data.getData();
+		        String picturePath = getRealPathFromURI(selectedImageURI);
+		        byte[] image = null;
+			    try {
+	                image = readInFile(picturePath);
+	                //ImageView imageView = (ImageView) findViewById(R.id.imageView1);
+	                //Bitmap bmp2 = BitmapFactory.decodeByteArray(image, 0, image.length);
+	                //imageView.setImageBitmap(bmp2);      
+	            }
+	            catch(Exception e) { 
+	                e.printStackTrace();
+	            }
+
+	            // Create the ParseFile
+	            ParseFile file = new ParseFile("picturePath", image);
+	            // Upload the image into Parse Cloud
+	            try {
+					file.save();
+				} catch (ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+	            
+	            file.saveInBackground();
+
+	    
+	            user.put("profilePicture", file);
+	            user.saveInBackground();
+		    }
+		}
 	public void saveChanges() {
 		user.put("firstName", e1.getText().toString());
         user.put("lastName", e2.getText().toString());

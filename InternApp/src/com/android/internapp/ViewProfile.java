@@ -58,8 +58,17 @@ public class ViewProfile extends Activity {
 	        public void done(List<ParseObject> objects, ParseException e) {
 	            if (e == null) {
 	            	ParseObject user = objects.get(0);
-	            	String email = user.getString("firstName");
+	            	String email = user.getString("username");
+	        		String firstname = user.getString("firstName");
+	        	    String lastname = user.getString("lastName");
+	        	    String address = user.getString("address");
+	        	    String phonenumber = user.getString("phoneNumber");
+	        	    String college = user.getString("college");
+	        	    String major = user.getString("major");
+	        	    String about = user.getString("about");
+	        	    
 	        		profilename.setText(email);
+	        		
 	        		
 	                	ParseFile image = (ParseFile) user.get("profilePicture");
 	                	byte[] data;
