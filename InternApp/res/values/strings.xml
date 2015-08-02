@@ -65,7 +65,6 @@
     <string name="title_activity_sidebar2">Sidebar2</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
-    
     <string name="title_activity_preferences_fragment">PreferencesFragment</string>
     <string name="title_activity_test_side_bar">TestSideBar</string>
     <string name="or_hdr_first_day_chklist">I have the following items ready and with me for my 1st day</string>
@@ -97,5 +96,6 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_view_profile">ViewProfile</string>
     <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_custom_list_view_android_example">CustomListViewAndroidExample</string>
 
 </resources>
