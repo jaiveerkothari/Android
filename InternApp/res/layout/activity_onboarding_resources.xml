@@ -153,14 +153,14 @@
             android:text="@string/or_tasks_a" />
         
         <TextView
-            style="@style/txt_faq_q"
+            style="@style/txt_faq_a"
             android:id="@+id/or_tasks_b"
             
             android:layout_below="@+id/or_tasks_a"
             android:text="@string/or_tasks_b" />
         
         <TextView
-            style="@style/txt_faq_q"
+            style="@style/txt_faq_a"
             android:id="@+id/or_tasks_c"
             
             android:layout_below="@+id/or_tasks_b"

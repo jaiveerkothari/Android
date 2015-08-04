@@ -72,7 +72,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 	private View mLoginFormView;
 	private EditText usernameEditText;
 	private EditText passwordEditText;
-
+	
+//	protected void onResume() {
+//        super.onResume();
+//        Intent intent = getIntent();
+//        finish();
+//        startActivity(intent);
+//    }
+//	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -120,7 +128,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 		mLoginFormView = findViewById(R.id.login_form);
 		mProgressView = findViewById(R.id.login_progress);
 	}
-
+	@Override
+	public void onBackPressed() {
+	}
 	private void populateAutoComplete() {
 		if (VERSION.SDK_INT >= 14) {
 			// Use ContactsContract.Profile (API 14+)
@@ -194,7 +204,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 		          // Show the error message
 		          //Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
 		          Intent intent2 = getIntent();
-		          //intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//		          intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 		          //finish();
 		          startActivity(intent2);
 //		          Intent intent = new Intent(LoginActivity.this, Map.class);
@@ -202,8 +212,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 		          //finish();
 		        } else {
 		          // Start an intent for the dispatch activity
-		          Intent intent = new Intent(LoginActivity.this, ItemListActivity.class);
-		          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+		          Intent intent = new Intent(LoginActivity.this, Profile.class);
+//		          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 		          startActivity(intent);
 		          finish();
 		        }

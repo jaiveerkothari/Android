@@ -22,16 +22,17 @@ public class Map extends OnboardingResources
 	ListView lv;
     TextView selection;
     ListItem[] items = { 
-            new ListItem("Blue Ash Tech Center", BATC.class), 
-            new ListItem("BEBC", BBC.class), 
+            new ListItem("Blue Ash Technical Center", BATC.class), 
+            new ListItem("Brendamour Business Center (BEBC)", BBC.class), 
             new ListItem("Building 800 (Orientation)", Bldg800.class), 
             new ListItem("Crown Point", CrownPoint.class), 
             new ListItem("Evendale Plant", Evendale.class), 
-            new ListItem("Indiana Wesleyan University", IWU.class), 
-            new ListItem("North Pointe 1", NP1.class), 
-            new ListItem("North Pointe 2", NP2.class), 
+            new ListItem("Indiana Wesleyan University (IWU)", IWU.class), 
+            new ListItem("North Pointe 1 (NP1)", NP1.class), 
+            new ListItem("North Pointe 2 (NP2)", NP2.class),
+            new ListItem("Peebles", Peebles.class),
             new ListItem("Princeton Hill (CTEC)", PrincetonHill.class), 
-            new ListItem("Quality Technology Center", QTC.class)};
+            new ListItem("Quality Technology Center (QTC)", QTC.class)};
 
     @Override
     public void onCreate(Bundle icicle)
@@ -93,8 +94,9 @@ public class Map extends OnboardingResources
         final Intent intent5 = new Intent(this, IWU.class);
         final Intent intent6 = new Intent(this, NP1.class);
         final Intent intent7 = new Intent(this, NP2.class);
-        final Intent intent8 = new Intent(this, PrincetonHill.class);
-        final Intent intent9 = new Intent(this, QTC.class);
+        final Intent intent8 = new Intent(this, Peebles.class);
+        final Intent intent9 = new Intent(this, PrincetonHill.class);
+        final Intent intent10 = new Intent(this, QTC.class);
 //      startActivityForResult(intent, position);
         
         lv.setOnItemClickListener(new OnItemClickListener()
@@ -135,6 +137,9 @@ public class Map extends OnboardingResources
                      case 9:
                     	 startActivityForResult(intent9, position);
                          break;
+                     case 10:
+                    	 startActivityForResult(intent10, position);
+                         break;
                      default:
                          break;
                  }
@@ -142,7 +147,9 @@ public class Map extends OnboardingResources
               }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+    }
 //    @Override
 //    protected void onListItemClick(ListView l, View v, int position, long id)
 //    {

@@ -1,7 +1,9 @@
 package com.android.internapp;
 import java.util.ArrayList;
+
 import com.parse.ParseFile;
 import com.parse.ParseUser;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -11,6 +13,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
+import android.media.ThumbnailUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,14 +119,7 @@ public class CustomAdapter extends BaseAdapter implements OnClickListener {
                   	byte[] data;
                   	try {
                   		data = image.getData();
-                  		Bitmap bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
-                  		Bitmap circleBitmap = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Bitmap.Config.ARGB_8888);
-                  		BitmapShader shader = new BitmapShader (bmp,  TileMode.CLAMP, TileMode.CLAMP);
-                  		Paint paint = new Paint();
-                  		        paint.setShader(shader);
-                  		paint.setAntiAlias(true);
-                  		Canvas c = new Canvas(circleBitmap);
-                  		c.drawCircle(bmp.getWidth()/2, bmp.getHeight()/2, bmp.getWidth()/2, paint);
+                  		Bitmap bmp = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeByteArray(data, 0, data.length), 200, 200);
                           holder.image.setImageBitmap(bmp); }
                   	catch (Exception e){
                   		e.hashCode();

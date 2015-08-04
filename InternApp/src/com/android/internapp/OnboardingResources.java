@@ -1,6 +1,8 @@
 package com.android.internapp;
 import java.util.ArrayList;
 
+import com.parse.ParseUser;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -84,6 +86,9 @@ public class OnboardingResources extends AppCompatActivity {
 
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
+	@Override
+	public void onBackPressed() {
+	}
 	/*
 	 * Called when a particular item from the navigation drawer
 	 * is selected.
@@ -119,9 +124,20 @@ public class OnboardingResources extends AppCompatActivity {
 			startActivity(detailIntent4);	
 		}
 		else if(position==5) {
-			Intent detailIntent4 = new Intent(this, LoginActivity.class);
-			detailIntent4.putExtra(ItemDetailFragment.ARG_ITEM_ID, position);
-			startActivity(detailIntent4);	
+			ParseUser.logOut();
+			finish();
+			quit();
+//			android.os.Process.killProcess(android.os.Process.myPid());
+//			super.onDestroy();
+			
+			
+
+//			
+////	        // Start and intent for the dispatch activity
+//	        Intent intent = new Intent(this, LoginActivity.class);
+//	        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//	        startActivity(intent);
+
 		}
 
 
@@ -145,6 +161,11 @@ public class OnboardingResources extends AppCompatActivity {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerPane);
 		menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
 		return super.onPrepareOptionsMenu(menu);
+	}
+	public void quit() {
+	    int pid = android.os.Process.myPid();
+	    android.os.Process.killProcess(pid);
+	    System.exit(0);
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

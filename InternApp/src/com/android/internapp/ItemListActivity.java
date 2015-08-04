@@ -136,7 +136,7 @@ public class ItemListActivity extends FragmentActivity implements
 				detailIntent2.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
 				startActivity(detailIntent2);	
 			} else if(id.equals("3")) {
-				Intent detailIntent3 = new Intent(this, FAQ.class);
+				Intent detailIntent3 = new Intent(this, CustomListViewAndroidExample.class);
 				detailIntent3.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
 				startActivity(detailIntent3);	
 			} else if(id.equals("4")) {

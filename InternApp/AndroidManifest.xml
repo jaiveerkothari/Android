@@ -167,6 +167,10 @@
             android:name=".CustomListViewAndroidExample"
             android:label="@string/title_activity_custom_list_view_android_example" >
         </activity>
+        <activity
+            android:name=".Peebles"
+            android:label="@string/title_activity_peebles" >
+        </activity>
     </application>
 
 </manifest>

@@ -13,10 +13,11 @@
                   android:paddingBottom="5dp"
                   >
               <ImageView
+                  android:adjustViewBounds="true"
                   android:layout_height="wrap_content"
                   android:layout_width="wrap_content"
                   android:layout_gravity="left|top" 
-                  android:scaleType="centerCrop"
+                  android:scaleType="centerInside"
                   android:id="@+id/image"
                    
                   />

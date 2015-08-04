@@ -3,23 +3,19 @@ import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -28,15 +24,12 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.Parse; 
-import com.parse.ParseFile;
-import com.parse.ParseObject;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -51,6 +44,7 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
   private EditText lastnameEditText;
   private EditText passwordAgainEditText;
   private EditText collegeEditText;
+  private EditText code;
   private static int RESULT_LOAD_IMAGE = 1;
   private String major;
 
@@ -85,6 +79,7 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
     passwordEditText = (EditText) findViewById(R.id.password_edit_text);
     passwordAgainEditText = (EditText) findViewById(R.id.password_again_edit_text);
     collegeEditText = (EditText) findViewById(R.id.college_text);
+    code = (EditText) findViewById(R.id.code_text);
     passwordAgainEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
       @Override
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -98,10 +93,26 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
     });
 
     // Set up the submit button click handler
+    final AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
     Button mActionButton = (Button) findViewById(R.id.action_button);
     mActionButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View view) {
+    	if (code.getText().toString().equals("iwork4ge")) {
         signup();
+    	}
+    	else {
+            dlgAlert.setMessage("GE code is incorrect. Please check email.");
+            dlgAlert.setTitle("Incorrect GE Code");
+            dlgAlert.setPositiveButton("OK", null);
+            dlgAlert.setCancelable(true);
+            dlgAlert.create().show();
+            dlgAlert.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });	
+    	}
       }
     });
   }
@@ -190,6 +201,9 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
 		    user.put("program", "EID Intern");
 			user.put("college", college);
 			user.put("major", major);
+			user.put("address", "");
+			user.put("phoneNumber", "");
+			user.put("about", "");
 			
 			
 			
@@ -244,7 +258,7 @@ public class SignUpActivity extends Activity implements OnItemSelectedListener{
 			          Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
 			        } else {
 			          // Start an intent for the dispatch activity
-			          Intent intent = new Intent(SignUpActivity.this, ItemListActivity.class);
+			          Intent intent = new Intent(SignUpActivity.this, Profile.class);
 			          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 			          startActivity(intent);
 			        }

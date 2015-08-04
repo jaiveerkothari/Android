@@ -13,7 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 public class FAQ extends OnboardingResources { 
 	TextView txt_help_gest;
-	
+	@Override
+	public void onBackPressed() {
+	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
